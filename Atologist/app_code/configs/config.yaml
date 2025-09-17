@@ -1,0 +1,18 @@
+app:
+  prompt_dir: "prompts"
+
+
+llm:
+  provider: "openai"      # e.g., openai, anthropic, huggingface, google
+  model: "gpt-4o-mini"
+  api_key: "your-openai-api-key-here" #api key 
+  api_key_env: "OPENAI_API_KEY"
+  inference_params:
+    temperature: 0.0
+    max_tokens: 2048
+    timeout: 30
+
+
+
+
+

@@ -1,0 +1,31 @@
+# Data Extraction and Action Agent for Event Management
+
+## LangChain agent
+- extract structured information (event descriptions)
+    - info: date, time, title, location, attendees
+- "add" an event to a simulated calendar system
+
+
+## Requirements:
+
+1. Define Event Management Tool (Simulated):
+    - Add Event Tool:
+        * Python function: add_event_to_calendar(simulates adding an event.)
+            parameters: title (str), date (str, e.g., "YYYY-MM-DD"), time (str, e.g., "HH:MM"), location (str, optional), and attendees (list of str, optional).
+            return: 
+                confirmation message: including the details it received (e.g., "Event 'Meeting' on 2025-07-15 at 10:00 AM successfully added.").
+
+2. Agent Development with Structured Output Parsing:
+    - Use LangChain's initialize_agent with an appropriate agent type.
+    - agent needs to perform information extraction (before calling the tool.)
+        Consider using: 
+            * PydanticOutputParser: Define a Pydantic model for EventDetails (title, date,time, location, attendees) to guide the LLM in extracting structured data from the user's natural language input.
+            * Tool Description: The add_event_to_calendar tool's description should clearly specify the expected input parameters and their types.
+
+
+    - The agent should be able to:
+        * Parse natural language input (e.g., "Schedule a team meeting for tomorrow at 3 PM in Conference Room A with Alice and Bob about Q3 planning.").
+        * Extract the title, date, time, location, and attendees into the structured format.
+        * Call the add_event_to_calendar tool with the extracted parameters.
+        * Handle missing information gracefully by either asking clarifying questions or using default values (e.g., current date if "tomorrow" is given).
+

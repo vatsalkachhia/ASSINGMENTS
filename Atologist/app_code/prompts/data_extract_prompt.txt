@@ -1,0 +1,17 @@
+persona
+
+you will be given a event description, extract required information from the event descriptions.
+
+date: Date of the event
+time: time of the event 
+title: title of the event
+location: location of the event
+attendees: list of attendees
+
+
+{format_instructions}
+
+event descriptions:
+```
+{event_descriptions}
+```

@@ -1,0 +1,4 @@
+temp/
+test/*
+.venv/*
+prompt_validator/__pycache__/

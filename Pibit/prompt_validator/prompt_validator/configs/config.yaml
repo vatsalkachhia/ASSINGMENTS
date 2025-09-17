@@ -1,0 +1,34 @@
+app:
+  prompt_dir: "prompts"
+  input_dir: "inputs"
+  report_dir: "inference/reports"
+  output_dir: "inference/outputs"
+
+
+llm:
+  provider: "openai"      # e.g., openai, anthropic, huggingface, google
+  model: "gpt-4o-mini"
+  api_key: "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" #api key             # leave empty to use env var below
+  api_key_env: "OPENAI_API_KEY"
+  inference_params:
+    temperature: 0.0
+    max_tokens: 2048
+    timeout: 30
+
+
+# llm:
+#   provider: "huggingface"
+#   # model: "" #huggingface model
+#   api_key: "api_key"
+#   unique_load_params:
+#     do_sample: false
+#     task: "text-generation"
+#     provider: "auto"
+
+#   inference_params:
+#     temperature: 0.0
+#     max_tokens: 2048
+
+
+
+

@@ -1,0 +1,9 @@
+langchain
+langchain-openai
+langchain-anthropic
+langchain-huggingface
+tabulate
+numpy
+pytest
+pytest-cov
+coverage

@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: prompt_validator
+Version: 0.0.0
+Requires-Dist: langchain
+Requires-Dist: langchain-openai
+Requires-Dist: langchain-anthropic
+Requires-Dist: langchain-huggingface
+Requires-Dist: tabulate
+Requires-Dist: numpy
+Requires-Dist: pytest
+Requires-Dist: pytest-cov
+Requires-Dist: coverage
+Dynamic: requires-dist

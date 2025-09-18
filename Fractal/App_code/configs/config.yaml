@@ -1,0 +1,28 @@
+app:
+  prompt_dir: "prompts"
+  save_data_path: "data/upload_data.json"
+
+agent:
+  reasoning_layer:
+    llm:
+      provider: "openai"
+      model: "gpt-4o-mini"
+      inference_params:
+        temperature: 0.0
+        max_tokens: 2048
+        timeout: 30
+
+  action_layer:
+    llm:
+      provider: "openai"
+      model: "gpt-4o-mini"
+      inference_params:
+        temperature: 0.0
+        max_tokens: 2048
+        timeout: 30
+
+llm:
+  provider: 
+    openai:
+      api_key: "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" #api key 
+      api_key_env: "OPENAI_API_KEY"
